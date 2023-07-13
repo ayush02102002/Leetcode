@@ -1,0 +1,29 @@
+import java.util.*;
+class Solution {
+    public static int averageValue(int[] nums) {
+        int sum=0;int x=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]%2==0 && nums[i]%3==0)
+            {
+                sum+=nums[i];
+                x++;
+            }
+        }
+        if(x==0)
+        return x;
+        else
+        return Math.round(sum/x);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int nums[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            nums[i]=sc.nextInt();
+        }
+        System.out.println(averageValue(nums));
+    }
+}
