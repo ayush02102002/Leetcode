@@ -1,0 +1,22 @@
+import java.util.*;
+class Solution {
+    public static boolean isPalindrome(int x) {
+        int x1=x;int y=0;
+        while(x1>=1)
+        {
+            int m=x1%10;
+            y=y*10+m;
+            x1/=10;
+        }
+        if(x==y)
+        return true;
+        else
+        return false;        
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        System.out.println(isPalindrome(x));
+    }
+}
